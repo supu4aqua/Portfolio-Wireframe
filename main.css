@@ -18,10 +18,9 @@ main {
 }
 
 .sidebar {
-    background-color: beige;
     text-align: center;
     padding-top: 100px;
-    flex: 0 0 25%;
+    width: 25%;
 }
 
 .nav {
@@ -49,7 +48,33 @@ main {
 }
 
 footer {
-    background: blue;
-    border: 1px solid black;
+    background: dark grey;
     text-align: center;
+}
+
+
+/* Mobile Styles */
+
+@media only screen and (max-width: 400px) {
+    .sidebar {
+        margin-left: -24%;
+    }
+}
+
+
+/* Tablet Styles */
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    .sidebar {
+        margin-left: -24%;
+    }
+}
+
+
+/* Desktop Styles */
+
+@media only screen and (min-width: 961px) {
+    .sidebar {
+        width: 25%;
+    }
 }
