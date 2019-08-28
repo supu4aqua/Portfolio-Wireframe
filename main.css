@@ -15,41 +15,56 @@ main {
 .wrapper {
     display: flex;
     height: 100%;
+    flex-direction: row;
 }
 
 .sidebar {
     text-align: center;
-    padding-top: 100px;
+    padding-top: 35px;
     width: 25%;
+    background-color: whitesmoke;
 }
 
 .nav {
-    padding-top: 50px;
+    padding-top: 30px;
     list-style-type: none;
-    color: black;
     font-family: sans-serif;
     font-weight: bold;
     font-size: 18px;
+    text-align: center;
 }
 
 .nav li {
-    padding-bottom: 30px;
+    text-transform: uppercase;
+    /*border: 1px solid black;*/
+    width: 110px;
+    margin: auto;
+    line-height: 80px;
+}
+
+
+/*
+.smallSidebar {
+    font-size: 5px;
+}*/
+
+.nav li :hover {
+    cursor: pointer;
+    color: blue;
 }
 
 .bio {
     flex: 1;
-    font-weight: bold;
-    font-size: 30px;
-    text-align: center;
+    flex-wrap: wrap;
+    font-size: 20px;
+    text-align: left;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding-top: 200px;
+    padding-top: 100px;
     height: 100%;
-    border: 1px solid black;
-}
-
-.bio div {
-    height: 25%;
-    line-height: 20px;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    /*border: 1px solid;*/
 }
 
 footer {
@@ -57,34 +72,117 @@ footer {
 }
 
 h3 {
-    color: blue;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 32px;
 }
 
+span {
+    color: blue;
+    font-weight: bold;
+}
 
-/* Mobile Styles */
+.sidebar p {
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+
+/*
+.contact-info,
+.skills-info,
+.projects-info {
+    padding-top: 150px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+*/
+
+.contact-info p,
+.skills-info p {
+    /*font-weight: bold;*/
+    font-size: 15px;
+}
+
+.projects-info {
+    overflow: hidden;
+}
+
+.projects-info p {
+    font-size: 15px;
+    /* border: 1px solid;*/
+    display: table-cell;
+    height: 300px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+    text-align: left;
+}
+
+.projects-info img {
+    width: 300px;
+    height: 300px;
+    /* border: 1px solid;*/
+    float: left;
+}
+
+
+/*
+.content {
+    padding-top: 150px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.content {
+    flex: 1;
+    width: 10%;
+}
+*/
+
+
+/*
+.hide {
+    margin-left: -23%;
+}
+*/
 
 @media only screen and (max-width: 400px) {
-    .sidebar {
-        margin-left: -24%;
+    .sidebar h3 {
+        font-size: 10px;
+        padding-top: 50px;
+    }
+    .sidebar p {
+        font-size: 6px;
+    }
+    .nav {
+        font-size: 6px;
+    }
+    .nav li {
+        width: 40px;
+        margin-left: 0px;
+        line-height: 40px;
+    }
+    /*  .icon {
+        display: inline;
+    }
+    i {
+        font-size: 30px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }*/
+    .bio {
+        font-size: 10px;
     }
 }
-
-
-/* Tablet Styles */
 
 @media only screen and (min-width: 401px) and (max-width: 960px) {
-    .sidebar {
-        margin-left: -24%;
-    }
+    /* .icon {
+        display: none;
+    }*/
 }
 
-
-/* Desktop Styles */
-
 @media only screen and (min-width: 961px) {
-    .sidebar {
-        width: 25%;
-    }
+    /*  .icon {
+        display: none;
+    }*/
 }
